@@ -204,7 +204,7 @@ If you found this helpful, please cite the following paper:
 
 @InProceedings{Sriramdmfg2022,
   title = 	 {Decentralized Mean Field Games},
-  author = 	 {Ganapathi Subramanian, Sriram and Taylor, Matthew and Crowley, Mark and Poupart, Pascal} 
+  author = 	 {Subramanian, Sriram Ganapathi and Taylor, Matthew and Crowley, Mark and Poupart, Pascal} 
   booktitle = 	 {Proceedings of the Association for the Advancement of Artificial Intelligence (AAAI-2022)},
   year = 	 {2022},
   editor = 	 {Katia Sycara},
