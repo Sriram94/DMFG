@@ -42,7 +42,7 @@ def run_tigerdeer(parallel_env):
                     agent_observation = change_observation(agent_observation)
                     action = RL[agent].choose_action(agent_observation)
                     action_list.append(action)
-                    actions[agent] = action 
+                actions[agent] = action 
             new_observation, rewards, dones, infos = parallel_env.step(actions)   
              
             if not parallel_env.agents:  

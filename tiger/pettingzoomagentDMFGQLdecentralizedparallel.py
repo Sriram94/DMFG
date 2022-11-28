@@ -68,7 +68,7 @@ def run_tigerdeer(parallel_env):
                     agent_observation = observation[agent]        
                     agent_observation = change_observation(agent_observation)
                     action = RL[agent].choose_action(agent_observation, estimated_mean_action[agent])
-                    actions[agent] = action
+                actions[agent] = action
             
             new_observation, rewards, dones, infos = parallel_env.step(actions)   
             

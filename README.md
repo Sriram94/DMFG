@@ -105,6 +105,11 @@ pip install --upgrade pip
 pip install tensorflow
 ``` 
 
+- `Pandas`
+
+```shell
+pip install pandas 
+``` 
 
 ## Installation Instructions of ride sharing environment for Ubuntu 18.04
 

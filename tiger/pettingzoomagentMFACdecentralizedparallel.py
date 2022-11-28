@@ -56,7 +56,7 @@ def run_tiger_deer(parallel_env):
                     agent_observation = observation[agent]       
                     agent_observation = change_observation(agent_observation)
                     action = actor[agent].choose_action(agent_observation)
-                    actions[agent] = action 
+                actions[agent] = action 
             new_observation, rewards, dones, infos = parallel_env.step(actions)   
             
             if not parallel_env.agents:  
