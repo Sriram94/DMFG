@@ -125,11 +125,10 @@ def run_tiger_deer(parallel_env):
         print("The number of tigers alive is", team_size[1])
 
 
-    for agent in parallel_env.agents:
-        if 'tiger' in agent:
-            actor[agent].save_model("./"+agent+"/dmfgacactormodel.ckpt")
-            critic[agent].save_model("./"+agent+"/dmfgaccriticmodel.ckpt")
-            meanactionobject[agent].save_model("./"+agent+"/dmfgacmeanactionmodel.ckpt")
+    for agent in actor:
+        actor[agent].save_model("./"+agent+"/dmfgacactormodel.ckpt")
+        critic[agent].save_model("./"+agent+"/dmfgaccriticmodel.ckpt")
+        meanactionobject[agent].save_model("./"+agent+"/dmfgacmeanactionmodel.ckpt")
     
     print('game over')
 

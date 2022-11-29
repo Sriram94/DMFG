@@ -52,7 +52,7 @@ def get_config(map_size, minimap_mode, tiger_step_recover, deer_attacked):
 
     options = {
         'width': 1, 'length': 1, 'hp': 10, 'speed': 1,
-        'view_range': gw.CircleRange(4), 'attack_range': gw.CircleRange(1), 'step_reward': -0.005, 'attack_penalty': -0.1,  
+        'view_range': gw.CircleRange(4), 'attack_range': gw.CircleRange(1), 'step_reward': -0.005, 
         'damage': 1, 'step_recover': tiger_step_recover
     }
     tiger = cfg.register_agent_type(

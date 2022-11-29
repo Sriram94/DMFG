@@ -120,7 +120,7 @@ def run_tigerdeer(parallel_env):
         print("The number of tigers alive is", team_size[1])
         print("The accumulated reward is ", accumulated_reward)
 
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt") 
         RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmeanfieldmodel.ckpt") 
     print('game over')

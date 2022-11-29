@@ -113,7 +113,7 @@ def run_battle(parallel_env):
             
             
 
-        for agent in parallel_env.agents:
+        for agent in RL:
             RL[agent].learn() 
 
         print("The episode is", num_episode)
@@ -130,7 +130,7 @@ def run_battle(parallel_env):
         num_episode = num_episode + 1            
 
 
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt")
         RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmodelmeanfield.ckpt")
     

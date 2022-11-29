@@ -72,9 +72,8 @@ def run_tigerdeer(parallel_env):
             if team_size[0] == 0:                      
                 break 
             
-        for agent in parallel_env.agents:
-            if 'tiger' in agent:
-                RL[agent].learn()
+        for agent in RL:
+            RL[agent].learn()
 
         print("The episode is", num_episode)
         
@@ -85,9 +84,8 @@ def run_tigerdeer(parallel_env):
         print("The number of agents alive in deers is", number_alive[0])
         print("The number of agents alive in tigers is", number_alive[1])
    
-    for agent in parallel_env.agents:
-        if 'tiger' in agent:
-            RL[agent].save_model("./"+agent+"/dqnmodel.ckpt")
+    for agent in RL:
+        RL[agent].save_model("./"+agent+"/dqnmodel.ckpt")
     
     print('game over')
 

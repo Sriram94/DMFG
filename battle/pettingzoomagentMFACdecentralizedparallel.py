@@ -103,7 +103,7 @@ def run_battle(parallel_env):
         print("The number of red agents alive is", team_size[0])
         print("The number of blue agents alive is", team_size[1])            
     
-    for agent in parallel_env.agents:
+    for agent in actor:
         actor[agent].save_model("./"+agent+"/actormodel.ckpt")
         critic[agent].save_model("./"+agent+"/criticmodel.ckpt")
     

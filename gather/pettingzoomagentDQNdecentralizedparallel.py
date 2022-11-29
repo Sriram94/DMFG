@@ -60,7 +60,7 @@ def run_gather(parallel_env):
 
 
 
-        for agent in parallel_env.agents:
+        for agent in RL:
             RL[agent].learn()        
         
         
@@ -76,7 +76,7 @@ def run_gather(parallel_env):
         print("The accumulated reward is", accumulated_reward)
         print("The number of agents alive is", len(parallel_env.agents))
 
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/dqnmodel.ckpt")
     
     print('game over')

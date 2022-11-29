@@ -102,10 +102,9 @@ def run_tiger_deer(parallel_env):
         print("The accumulated reward is", accumulated_reward)
 
 
-    for agent in parallel_env.agents:
-        if 'tiger' in agent:
-            actor[agent].save_model("./"+agent+"/actormodel.ckpt")
-            critic[agent].save_model("./"+agent+"/criticmodel.ckpt")
+    for agent in actor:
+        actor[agent].save_model("./"+agent+"/actormodel.ckpt")
+        critic[agent].save_model("./"+agent+"/criticmodel.ckpt")
 
 
     print('game over')

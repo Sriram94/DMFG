@@ -100,7 +100,7 @@ def run_gather(parallel_env):
             print("The step we are at is", step)
                 
             
-        for agent in parallel_env.agents:
+        for agent in RL:
             RL[agent].learn()
 
         print("The episode is", num_episode)
@@ -114,7 +114,7 @@ def run_gather(parallel_env):
     
     
     
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt")
         RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmeanfieldmodel.ckpt")
     

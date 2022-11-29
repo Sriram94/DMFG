@@ -121,7 +121,7 @@ def run_battle(parallel_env):
             
             
             
-        for agent in parallel_env.agents:
+        for agent in RL:
             RL[agent].learn()
 
 
@@ -144,7 +144,7 @@ def run_battle(parallel_env):
 
 
     
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt") 
         RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmeanfieldmodel.ckpt") 
 

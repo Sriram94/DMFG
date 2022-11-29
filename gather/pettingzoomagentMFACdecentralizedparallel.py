@@ -91,7 +91,7 @@ def run_gather(parallel_env):
         print("The number of agents alive is", team_size[0])
         
         
-    for agent in parallel_env.agents:
+    for agent in actor:
         actor[agent].save_model("./"+agent+"/actormodel.ckpt")
         critic[agent].save_model("./"+agent+"/criticmodel.ckpt")
     

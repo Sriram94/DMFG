@@ -90,9 +90,8 @@ def run_tigerdeer(parallel_env):
         
 
 
-        for agent in parallel_env.agents:
-            if 'tiger' in agent:
-                RL[agent].learn()
+        for agent in RL:
+            RL[agent].learn()
 
 
 
@@ -110,9 +109,8 @@ def run_tigerdeer(parallel_env):
         
         
         
-    for agent in parallel_env.agents:
-        if 'tiger' in agent:
-            RL[agent].save_model("./"+agent+"/mfqmodel.ckpt")
+    for agent in RL:
+        RL[agent].save_model("./"+agent+"/mfqmodel.ckpt")
     
     print('game over')
 

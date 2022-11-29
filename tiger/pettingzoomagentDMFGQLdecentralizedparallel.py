@@ -109,9 +109,8 @@ def run_tigerdeer(parallel_env):
             print("We are in step", step) 
             
         
-        for agent in parallel_env.agents:
-            if 'tiger' in agent:
-                RL[agent].learn()        
+        for agent in RL:
+            RL[agent].learn()        
         
         print("The episode is", num_episode)
         
@@ -125,10 +124,9 @@ def run_tigerdeer(parallel_env):
         print("The number of tigers alive is", team_size[1])
         print("The accumulated reward is ", accumulated_reward)
 
-    for agent in parallel_env.agents:
-        if 'tiger' in agent:
-            RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt") 
-            RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmeanfieldmodel.ckpt") 
+    for agent in RL:
+        RL[agent].save_model("./"+agent+"/dmfgqlmodel.ckpt") 
+        RL[agent].save_model_meanfield("./"+agent+"/dmfgqlmeanfieldmodel.ckpt") 
     
     print('game over')
 

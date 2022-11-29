@@ -98,7 +98,7 @@ def run_waterworld(parallel_env):
             myfile.write('{0},{1}\n'.format(num_episode, accumulated_reward))
     
     
-    for agent in parallel_env.agents:
+    for agent in actor:
         actor[agent].save_model("./"+agent+"/dmfgacactormodel.ckpt")
         critic[agent].save_model("./"+agent+"/dmfgaccriticmodel.ckpt")
         meanactionobject[agent].save_model("./"+agent+"/dmfgacmeanactionmodel.ckpt")

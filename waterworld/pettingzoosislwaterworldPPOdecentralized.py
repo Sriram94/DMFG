@@ -75,7 +75,7 @@ def run_waterworld(parallel_env):
         num_episode = num_episode + 1            
         print("The episode is", num_episode)
     
-    for agent in parallel_env.agents:
+    for agent in ppo:
         ppo[agent].save_actor_model(agent+"/actorppomodel.ckpt")
         ppo[agent].save_critic_model(agent+"/criticppomodel.ckpt")
     

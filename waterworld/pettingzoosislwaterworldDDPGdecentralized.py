@@ -81,7 +81,7 @@ def run_waterworld(parallel_env):
 
 
 
-    for agent in parallel_env.agents:
+    for agent in actor:
 
         actor[agent].save_model(agent+"/ddpgactormodel.ckpt")
         critic[agent].save_model(agent+"/ddpgcriticmodel.ckpt")

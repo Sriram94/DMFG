@@ -82,7 +82,7 @@ def run_gather(parallel_env):
 
 
 
-        for agent in parallel_env.agents:
+        for agent in RL:
             RL[agent].learn()
 
         print("The episode is", num_episode)
@@ -97,7 +97,7 @@ def run_gather(parallel_env):
         print("The accumulated reward is ", accumulated_reward)
     
     
-    for agent in parallel_env.agents:
+    for agent in RL:
         RL[agent].save_model("./"+agent+"/mfqmodel.ckpt")
     
     
