@@ -6,6 +6,9 @@ import random
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
 
+
+random.seed(1)
+
 def change_observation(observation):
     observation = observation.tolist()
     new_list = []
